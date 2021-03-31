@@ -3,5 +3,5 @@ Orderid as Order_id,
 paymentmethod as payment_method,
 status,
 -- amount stored in cents,converting into dollars
-amount/100 as amount,
+{{ cents_to_dollars('amount') }} as amount,
 created as crated_at from {{source('stripe','payment')}}

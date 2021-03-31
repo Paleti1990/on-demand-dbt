@@ -8,7 +8,7 @@ sources:
      - name: customers
        description: Raw customers data
        columns:
-          - name: customer_id
+          - name: id
             description: Primary key of the customers table
             tests:
               - unique
